@@ -26,6 +26,8 @@ source-repository head
 library
   exposed-modules:
       Comprehension
+      ConcatMap
+      MapFilter
   hs-source-dirs:
       src
   build-depends:
@@ -46,10 +48,44 @@ test-suite comprehension
   type: exitcode-stdio-1.0
   main-is: ComprehensionTest.hs
   other-modules:
+      ConcatMapTest
+      MapFilterTest
       Paths_ListComprT
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is ComprehensionTest
+  build-depends:
+      ListComprT
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite concatmap
+  type: exitcode-stdio-1.0
+  main-is: ConcatMapTest.hs
+  other-modules:
+      ComprehensionTest
+      MapFilterTest
+      Paths_ListComprT
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is ConcatMapTest
+  build-depends:
+      ListComprT
+    , QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite mapfilter
+  type: exitcode-stdio-1.0
+  main-is: MapFilterTest.hs
+  other-modules:
+      ComprehensionTest
+      ConcatMapTest
+      Paths_ListComprT
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -main-is MapFilterTest
   build-depends:
       ListComprT
     , QuickCheck
