@@ -17,3 +17,25 @@ haskell_binary(
     ],
 )
 
+haskell_binary(
+    name = "MapFilterTest",
+    srcs = ["MapFilterTest.hs"],
+    main_function = "MapFilterTest",
+    deps = [
+        ":base",
+        "@stackage//:QuickCheck",
+        "//ListCompr/src:MapFilter",
+    ],
+)
+
+haskell_binary(
+    name = "ConcatMapTest",
+    srcs = ["ConcatMapTest.hs"],
+    main_function = "ConcatMapTest",
+    deps = [
+        ":base",
+        "@stackage//:QuickCheck",
+        "//ListCompr/src:ConcatMap",
+    ],
+)
+

@@ -1,2 +1,2 @@
 # Template-Repository für folgende Aufgabe
-- Listen in Haskell/Listenkomprehension
+- Listen in Haskell/Listenkomprehension/ConcatMap

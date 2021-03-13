@@ -1,6 +1,5 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-
 module ComprehensionTest where
 import Comprehension
 import Test.QuickCheck

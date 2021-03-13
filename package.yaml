@@ -53,3 +53,24 @@ tests:
       - ListComprT
       - QuickCheck
 
+  mapfilter:
+    main:                MapFilterTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ListComprT
+      - QuickCheck
+
+  concatmap:
+    main:                ConcatMapTest
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ListComprT
+      - QuickCheck

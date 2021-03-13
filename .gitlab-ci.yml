@@ -11,3 +11,14 @@ comprehension:
   stage: test
   script:
     - stack $STACK_OPTS test :comprehension
+
+mapfilter:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :mapfilter
+
+concatmap:
+  stage: test
+  script:
+    - stack $STACK_OPTS test :concatmap
+
