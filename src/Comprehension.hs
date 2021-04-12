@@ -3,14 +3,14 @@ import Prelude hiding (map,filter)
 
 xs =  [x^2 | x <- [1..9], mod x 2==0 ]
 
-sqrs = undefined
+sqrs = [x^2 | x <- [0..6], mod x 2==0]
 
-euler1 = undefined
+euler1 = sum[x | x <- [0..999], mod x 3 == 0 || mod x 5 == 0 ]
 
-prodsOdd = undefined
+prodsOdd = [x * y | x <- [1..3], y <- [2..5], mod (x + y) 2 == 1]
 
-cartProd = undefined
+cartProd xs ys = [(x,y) | x <- xs, y <- ys]
 
-map = undefined
+map f xs = [f x | x <- xs]
 
-filter = undefined
+filter p xs = [ x | x <- xs, p x ]
