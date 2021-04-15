@@ -14,3 +14,5 @@ cartProd xs ys = [(x,y) | x <- xs, y <- ys]
 map f xs = [f x | x <- xs]
 
 filter p xs = [ x | x <- xs, p x ]
+
+
